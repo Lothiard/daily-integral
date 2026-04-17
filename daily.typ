@@ -649,6 +649,48 @@ $
 = 2026 16th April
 == derivative
 === easy
+Find the maximum value of $1/a$ such that the inequality $4a x^2 + 1/x >= 1$ holds for all $x > 0$
+$
+  4a x^2 >= 1 - 1/x\
+  a >= (1 - 1/x)/(4x^2)\
+  a >= (x - 1)/(4x^3)\
+  (dif)/(dif x)((x - 1)/(4x^3)) = (4x^3 - (x - 1)(12x^2))/((4x^3)^2) = (4x^3 -12x^3 + 12x^2)/(16x^6) = (12x^2 - 8x^3)/(16x^6) = (3 - 2x)/(4x^4),\
+  (3- 2x)/(4x^4) = 0 <==> 3 = 2x <==> x = 3/2,\
+  (3/2 - 1)/(4 (3/2)^3) = (1/2)/(4 27/8) = 1/2 dot 2/27 = 1/27\
+  a = 27
+$
+
+=== medium
+Let $f(x) = arctan(x/(1 + sqrt(1 + x^2)))$, find $f'(sqrt(2))$
+$
+  f'(x) = 1/(1 + (x/(1 + sqrt(1 + x^2)))^2) dot (1 + sqrt(1 + x^2) - (x^2)/(sqrt(1 + x^2)))/((1 + sqrt(1 + x^2))^2),\
+  f'(sqrt(2)) = 1/(1 + ((sqrt(2))/(1 + sqrt(3)))^2) dot (1 + sqrt(3) - 2/(sqrt(3)))/((1 + sqrt(3))^2) = 1/(1 + (2)/(1 + 2sqrt(3) + 3)) dot (1 + sqrt(3) - 2/(sqrt(3)))/(1 + 2sqrt(3) + 3) =\ = (1 + sqrt(3) - 2/(sqrt(3)))/(1 + 2sqrt(3) + 3 + 2) = (1 + sqrt(3) - 2/(sqrt(3)))/(6 + 2sqrt(3))
+$
+
+== integral
+=== beginner
+$integral_2^e (ln(ln(x)))/(x ln (x)) dif x$
+$
+  u = ln(x), "   " (dif u)/(dif x) = 1/x, "   " dif x = x dif u,\
+  integral_ln(2)^1 (ln(u))/(u) dif u = 1/2[ln^2(u)]_(ln(2))^1 = -1/2 ln^2(ln(2))
+$
+
+#pagebreak()
+=== easy
+$integral_1^2 (2x^2 (x + 1) - 3)/(x(x^3 + 2x^2 + 5x + 3)) dif x$
+$
+  (dif)/(dif x)(x^4 + 2x^3 + 5x^2 + 3x) = 4x^3 + 6x^2 + 10 x + 3\
+  integral_1^2 (2x^3 + 2x^2 - 3)/(x^4 + 2x^3 + 5x^2 + 3x) dif x = integral_1^2 ((4x^3 + 6x^2 + 10 x + 3) - 2x^3 - 4x^2 - 10x - 6)/(x^4 + 2x^3 + 5x^2 + 3x) dif x,\
+  "what a bullshit question wow"\
+  integral_1^2 (2x^3 + 2x^2 - 3)/(x^4 + 2x^3 + 5x^2 + 3x) dif x = integral_1^2 (2x + 2 - 3/x^2)/(x^2 + 2x + 5 + 3/x)\
+  (dif)/(dif x)(x^2 + 2x + 5 + 3/x) = 2x + 2 + (x-3)/(x^2) = 2x + 2 - 3/x^2\
+  integral_1^2 ((dif)/(dif x)(x^2 + 2x + 5 + 3/x))/(x^2 + 2x + 5 + 3/x) = [ln abs(x^2 + 2x + 5 + 3/x)]_1^2 = ln(29/2) - ln(11) = ln((29)/(22))
+$
+
+#pagebreak()
+= 2026 17th April
+== derivative
+=== easy
 
 === medium
 
