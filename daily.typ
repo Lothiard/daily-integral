@@ -691,6 +691,71 @@ $
 = 2026 17th April
 == derivative
 === easy
+Let $f$ be a real valued differentiable function on $RR$ such that $f(1)=1$. If the $y$-intercept of the tangent at any point $P(x,y)$ on the curve $y=f(x)$ is equal to the cube of the abscissa of $P$, then the value of $f(−3)$ is equal to.
+$
+  Y - y = (dif y)/(dif x) (0 - x)\
+  Y - y = -x (dif y)/(dif x)\
+  Y = y - x (dif y)/(dif x) = x^3\
+  (dif y)/(dif x) - 1/x y = -x^2\
+  1/x (dif y)/(dif x) - 1/x^2 y = -x\
+  (dif)/(dif x) (y dot 1/x) = -x\
+  y/x = -(x^2)/2 + C\
+  y = -(x^3)/2 + C x\
+  1 = -(1^3)/2 + C(1)\
+  1 = - 1/2 + C\
+  C = 3/2\
+  f(x) = - (x^3)/2 + (3x)/2\
+  f(-3) = ((-3)^3)/2 + (3(-3))/2\
+  f(-3) = 18/2 = 9\
+$
+
+#pagebreak()
+=== medium
+A curve $C$ has equation
+$
+  2^x + y^2 = 2x y
+$
+find the exact value of $(dif y)/(dif x)$ at the point on $C$ with coordinates $(3, 2)$.
+$
+  (dif)/(dif x)(2^x + y^2) = 2^x ln(2) + 2y (dif y)/(dif x) "   " (dif)/(dif x)(2x y) = 2y + 2x (dif y)/(dif x)\
+  2^x ln(2) + 2y (dif y)/(dif x) = 2y + 2x (dif y)/(dif x),\
+  2^3 ln(2) + 2 dot 2 (dif y)/(dif x) = 2 dot 2 + 2 dot 3 (dif y)/(dif x)\
+  8 ln(2) + 4 (dif y)/(dif x) = 4 + 6 (dif y)/(dif x)\
+  8 ln(2) = 4 + 2 (dif y)/(dif x)\
+  4 ln(2) = 2 + (dif y)/(dif x)\
+  (dif y)/(dif x) = 4 ln(2) - 2
+$
+
+== integral
+=== beginner
+$integral_1^9 (x^2 + sqrt(x) + 1)/(x^2) dif x$
+$
+  integral_1^9 (x^(1/2))/(x^2) dif x = integral_1^9 x^(1/2) dot x^(-2) dif x = integral_1^9 x^(- 3/2) dif x\
+  integral_1^9 1 dif x + integral_1^9 x^(- 3/2) dif x + integral_1^9 x^(-2) dif x = [x + (x^(-1/2))/(-1/2) + (x^(-1))/(-1)]_1^9 = [x - 2/(sqrt(x)) - 1/x]_1^9 = (9 - 2/3 - 1/9) - (1 - 2 - 1) =\ = 81/9 - 6/9 - 1/9 -1 +2 + 1 = 74/9 + 2 = 92/9
+$
+
+#pagebreak()
+=== easy
+$integral_1^e ln^3(x) dif x$
+$
+  u = ln(x), "   " (dif u)/(dif x) = 1/x, "   " dif x = x dif u, "   " x = e^u,\
+  integral_0^1 u^3 e^u dif u\
+  #table(
+    columns: 3,
+    [], [$D$], [$I$],
+    [$+$], [$u^3$], [$e^u$],
+    [$-$], [$3u^2$], [$e^u$],
+    [$+$], [$6u$], [$e^u$],
+    [$-$], [$6$], [$e^u$],
+    [$+$], [$0$], [$e^u$],
+  )\
+  integral_0^1 u^3 e^u dif u = [e^u (u^3 - 3u^2 + 6u - 6)]_0^1 = (e(1 - 3 + 6 - 6)) - (-6) = -2e + 6
+$
+
+#pagebreak()
+= 2026 18th April
+== derivative
+=== easy
 
 === medium
 
