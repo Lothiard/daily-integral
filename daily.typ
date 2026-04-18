@@ -566,7 +566,7 @@ $
 $
 
 #pagebreak()
-= 2026 14th April
+= 2026 15th April
 == derivative
 === easy
 Find the slope $(y-x^5)^2 = x(1 + x^2)^2$ at the $(1, 3)$ point.
@@ -611,7 +611,7 @@ $
 $
 
 #pagebreak()
-= 2026 15th April
+= 2026 16th April
 == derivative
 === easy
 Let $f(1) = 1$ and $f'(1) = 3$, find the derivative of $f(f(f(x))) + (f(x))^2$ at $x = 1$
@@ -646,7 +646,7 @@ $
 $
 
 #pagebreak()
-= 2026 16th April
+= 2026 17th April
 == derivative
 === easy
 Find the maximum value of $1/a$ such that the inequality $4a x^2 + 1/x >= 1$ holds for all $x > 0$
@@ -688,7 +688,7 @@ $
 $
 
 #pagebreak()
-= 2026 17th April
+= 2026 18th April
 == derivative
 === easy
 Let $f$ be a real valued differentiable function on $RR$ such that $f(1)=1$. If the $y$-intercept of the tangent at any point $P(x,y)$ on the curve $y=f(x)$ is equal to the cube of the abscissa of $P$, then the value of $f(−3)$ is equal to.
@@ -753,7 +753,59 @@ $
 $
 
 #pagebreak()
-= 2026 18th April
+= 2026 19th April
+== derivative
+=== easy
+Let $f(x) = x^2 - 3x + 2$ with domain $[1.5, oo)$, find $[f^(-1)]'(3)$
+$
+  y = x^2 - 3x + 2,\
+  y - 2 = x(x - 3) ==> " not doing ts"\
+  [f^(-1)(y)] = 1/(f'(x)),\
+  x^2 - 3x + 2 = 3 ==> x^2 - 3x - 1 = 0,\
+  x = (3 plus.minus sqrt(13))/2 = (3 plus sqrt(13))/2,\
+  f'(x) = 2x - 3,\
+  f'((3 + sqrt(13))/2) = sqrt(13),\
+  [f^(-1)]'(3) = 1/sqrt(13)
+$
+
+#pagebreak()
+=== medium
+Let $f(x) = sin(x) + cos(x) + tan(x) + cot(x) + sec(x) + csc(x)$, find the minimum value of $(f(x))^2$
+$
+  (f(x))^2 = (sin(x) + cos(x) + tan(x) + cot(x) + sec(x) + csc(x))^2,\
+  [(f(x))^2]' = 2(sin(x) + cos(x) + tan(x) + cot(x) + sec(x) + csc(x))\ (cos(x) - sin(x) + sec^2(x) - csc^2(x) + (sec(x) tan(x) -(csc(x) cot(x)))\
+  "akkor a kurva anyadat azt"\
+  f(x) = sin(x) + cos(x) + sin(x)/cos(x) + cos(x)/sin(x) + 1/cos(x) + 1/sin(x) =\
+  = (sin(x) + cos(x)) + underbrace((sin^2(x) + cos^2(x))/(cos(x)sin(x)), 1/(cos(x)sin(x))) + (sin(x) + cos(x))/(cos(x)sin(x)),\
+  u = sin(x) + cos(x), "   " u^2 = sin^2(x) + cos^2(x) + 2sin(x)cos(x) = 1 + 2sin(x)cos(x),\ (u^2 - 1)/2 = sin(x)cos(x),\
+  g(u) = u + (1 + u)/((u^2 - 1)/2) = u + (1 + u)(2/(u^2 - 1)) = u + (2 + 2u)/(u^2 - 1) = u + (2(u + 1))/((u - 1)(u + 1)) = u + 2/(u - 1),\
+  g'(u) = 1 + (2)/((u - 1)^2),\
+  1 = 2/((u - 1)^2) ==> (u - 1)^2 = 2 ==> u - 1 = sqrt(2) ==> u = 1 plus.minus sqrt(2),\
+  g(1 - sqrt(2)) = 1 - sqrt(2) + 2/(-sqrt(2)) = 1 - sqrt(2) - sqrt(2) = 1 - 2sqrt(2),\
+  (1 - 2sqrt(2))^2 = 1 - 4sqrt(2) + 8
+$
+
+#pagebreak()
+== integral
+=== beginner
+$integral_0^1 (ln(1 + x))/(1 + x) dif x$
+$
+  u = x + 1, "   " (dif u)/(dif x) = 1, "   " dif x = dif u,\
+  integral_1^2 (ln(u))/(u) dif u = 1/2[ln^2(u)]_1^2 = 1/2 ln^2(2)
+$
+
+=== easy
+$integral_0^(sqrt(pi/4)) 4x(sec^2(x^2) + sec^2(x^2) tan^2(tan(x^2))) dif x$
+$
+  u = x^2, "   " (dif u)/(dif x) = 2x, "   " dif x = 1/(2x) dif u,\
+  integral_0^(pi/4) 2(sec^2(u) + sec^2(u) tan^2(tan(u))) dif u = integral_0^(pi/4) 2(sec^2(u)(1 + tan^2(tan(u)))) dif u =\
+  = integral_0^(pi/4) 2(sec^2(u)(sec^2(tan(u)))) dif u,\
+  w = tan(u), "   " (dif w)/(dif u) = sec^2(u), "   " dif u = cos^2(u) dif w,\
+  integral_0^1 2(sec^2(u) dot (sec^2(w))) cos^2(u) dif w = 2 integral_0^1 sec^2(w) dif w = 2 [tan(w)]_0^1 = 2 tan(1)
+$
+
+#pagebreak()
+= 2026 20th April
 == derivative
 === easy
 
