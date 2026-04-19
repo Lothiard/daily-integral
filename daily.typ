@@ -808,10 +808,40 @@ $
 = 2026 20th April
 == derivative
 === easy
+Let $f(x) = (1 + cos(x^2))/(1 + sin(x^2))$, find $f'(1)$
+$
+  f'(x) = ((-sin(x^2)2x)(1 + sin(x^2)) - (1 + cos(x^2))(cos(x^2)2x))/((1 + sin(x^2))^2) =\ = (- 2x sin(x^2) - 2x sin^2(x^2) - 2x cos(x^2) - 2x cos^2(x^2))/((1 + sin(x^2))^2) = (-2x(sin(x^2) + sin^2(x^2) + cos(x^2) + cos^2(x^2)))/((1 + sin(x^2))^2) =\ = (-2x(sin(x^2) + cos(x^2) + 1))/(1 + 2sin(x^2) + sin^2(x^2)),\
+  f'(1) = (-2 sin(1) -2 cos(1) -2)/(1 + 2 sin(1) + sin^2(1))
+$
 
 === medium
+Let $f(x) = x^5 + 2e^(x/4)$ for all $x in RR$. Consider a function $g(x)$ such that $(g circle.small f)(x) = x$ for all $x in RR$. Find the value of $8g'(2)$.\
+we need: $f(x) = 2$\
+if $x = 0$:
+$
+  f(x) = 0 + 2e^(0/2) = 0 + 2 dot 1 = 2,\
+  g'(y) = 1/(f'(x)),\
+  f'(x) = 5x^4 + (4)/(16) 2e^(x/4) = 5x^4 + (e^(x/4))/2,\
+  f'(0) = 1/2,\
+  g'(2) = 1/(1/2) = 2,\
+  8g'(2) = 8 dot 2 = 16
+$
 
+#pagebreak()
 == integral
 === beginner
+$integral_0^(pi/2) sin^3(x) cos^2(x) dif x$
+$
+  integral_0^(pi/2) sin(x) dot sin^2(x)cos^2(x) dif x,\
+  u = cos(x), "   " (dif u)/(dif x) = -sin(x), "   " dif x = - 1/sin(x) dif u,\
+  integral_0^(pi/2) sin(x) dot (1 - cos^2(x))cos^2(x) dif x = integral_1^0 -1 dot (1 - u^2)u^2 dif u = - integral_1^0 u^2 - u^4 dif u = -[(u^3)/3 - (u^5)/5]_1^0 =\ = [(u^3)/3 - (u^5)/5]_0^1 = (1/3 - 1/5) - 0 = 2/15
+$
 
 === easy
+$integral_0^oo (arcsin(sqrt(1 - e^(-2x))))/(sqrt(e^(2x) - 1)) dif x$
+$
+  u = sqrt(1 - e^(-2x)), "   " (dif u)/(dif x) = (e^(-2x))/(sqrt(1 - e^(-2x))), "   " dif x = (sqrt(1 - e^(-2x)))/(e^(-2x)) dif u, "   " 1 - u^2 = e^(-2x),\
+  dif x = u/(1 - u^2) dif u,\
+  sqrt(e^(2x) - 1) = sqrt(1/(1 - u^2) - 1) = sqrt(u^2/(1 - u^2))\
+  integral_0^1 (arcsin(u))/(sqrt(u^2/(1 - u^2))) dot u/(1 - u^2) dif u = integral_0^1 (arcsin(u))/(u/sqrt(1 - u^2)) dot u/(1 - u^2) dif u = integral_0^1 (sqrt(1 - u^2)arcsin(u))/(u) dot u/(1 - u^2) dif u =\ = integral_0^1 (arcsin(u))/(sqrt(1 - u^2)) dif u = 1/2[arcsin^2(u)]_0^1 = 1/2[(pi/2)^2 - 0^2] = pi^2/8
+$
