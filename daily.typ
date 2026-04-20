@@ -845,3 +845,55 @@ $
   sqrt(e^(2x) - 1) = sqrt(1/(1 - u^2) - 1) = sqrt(u^2/(1 - u^2))\
   integral_0^1 (arcsin(u))/(sqrt(u^2/(1 - u^2))) dot u/(1 - u^2) dif u = integral_0^1 (arcsin(u))/(u/sqrt(1 - u^2)) dot u/(1 - u^2) dif u = integral_0^1 (sqrt(1 - u^2)arcsin(u))/(u) dot u/(1 - u^2) dif u =\ = integral_0^1 (arcsin(u))/(sqrt(1 - u^2)) dif u = 1/2[arcsin^2(u)]_0^1 = 1/2[(pi/2)^2 - 0^2] = pi^2/8
 $
+
+#pagebreak()
+= 2026 21th April
+== derivative
+=== easy
+Let $x^2 y + y^3 = 170$, find $(dif y)/(dif x)$ at $(3, 5)$
+$
+  partial_x = 2x y, "   " partial_y = x^2 + 3y^2,\
+  (dif y)/(dif x) = - (partial_x)/(partial_y) = (2x y)/(x^2 + 3y^2) ==> (2 dot 3 dot 5)/(9 + 3 dot 25) = -(30)/(84) = - 5/14
+$
+
+=== medium
+Let $y(x) = mat(
+  delim: "|",
+  sin(x), cos(x), sin(x) + cos(x) + 1;
+  27, 28, 27;
+  1, 1, 1;
+)$, find $(dif^2 y)/(dif x^2) + y$
+$
+  y(x) = sin(x) mat(delim: "|", 28, 27; 1, 1) - cos(x) mat(delim: "|", 27, 27; 1, 1) + (sin(x) + cos(x) + 1) mat(delim: "|", 27, 28; 1, 1) =\ = sin(x) + (sin(x) + cos(x) + 1)(-1) = - cos(x) - 1,\
+  y' = sin(x), "   " y'' = cos(x),\
+  (dif^2 y)/(dif x^2) + y = cos(x) - cos(x) - 1 = -1
+$
+
+== integral
+=== beginner
+$integral_0^1 1/(sqrt(x(1 - x))) dif x$
+$
+  x = sin^2(theta), "   " (dif x)/(dif theta) = 2sin(theta)cos(theta), "   " dif x= 2sin(theta)cos(theta) dif theta,\
+  integral_0^(pi/2) = (2sin(theta)cos(theta))/(sqrt(sin^2(theta)(1 - sin^2(theta)))) dif theta = integral_0^(pi/2) 1/(sin(theta)cos(theta)) 2sin(theta)cos(theta)dif theta = integral_0^(pi/2) 2 dif theta =\ = 2[theta]_0^(pi/2) = 2pi/2 = pi
+$
+
+#pagebreak()
+=== easy
+$integral_(-1/sqrt(2))^(1/sqrt(2)) [((x + 1)/(x - 1))^2 + ((x - 1)/(x + 1))^2 - 2]^(1/2) dif x$
+$
+  A = (x + 1)/(x - 1), "   " B = (x - 1)/(x + 1) ==> A B = 1,\
+  A^2 - 2 underbrace(A B, 1) + B^2 = (A - B)^2,\
+  integral_(-1/sqrt(2))^(1/sqrt(2)) [((x + 1)/(x - 1) - (x - 1)/(x + 1))^2]^(1/2) dif x = integral_(-1/sqrt(2))^(1/sqrt(2)) abs((x + 1)/(x - 1) - (x - 1)/(x + 1)) dif x = integral_(-1/sqrt(2))^(1/sqrt(2)) abs(((x + 1)^2 - (x - 1)^2)/((x - 1)(x + 1))) dif x =\ = integral_(-1/sqrt(2))^(1/sqrt(2)) abs((x^2 + 2x + 1 - (x^2 - 2x + 1))/(x^2 - 1)) dif x = integral_(-1/sqrt(2))^(1/sqrt(2)) abs((4x)/(x^2 - 1)) dif x = integral_(-1/sqrt(2))^0 abs((4x)/(x^2 - 1)) dif x + integral_0^(1/sqrt(2)) abs((4x)/(x^2 - 1)) dif x =\ = 2 integral_(-1/sqrt(2))^0 (2x)/(x^2 - 1) dif x - 2 integral_0^(1/sqrt(2)) (2x)/(x^2 - 1) dif x = 2[ln abs(x^2 - 1)]_(-1/sqrt(2))^0 - 2[ln abs(x^2 - 1)]_0^(1/sqrt(2)) =\ = 2(0 - ln(1/2)) - 2(ln(1/2) - 0) = -4ln(1/2) = 4ln(2)
+$
+
+#pagebreak()
+= 2026 22th April
+== derivative
+=== easy
+
+=== medium
+
+== integral
+=== beginner
+
+=== easy
