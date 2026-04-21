@@ -890,6 +890,31 @@ $
 = 2026 22th April
 == derivative
 === easy
+Let $x = 16 sin(2t)$ and $y = e^(2t) - sin(2t)$. Find $(dif y)/(dif x)$ when $t = -67$
+$
+  (dif y)/(dif x) = ((dif y)/(dif t))/((dif x)/(dif t))\
+  (dif x)/(dif t) = 16 cos(2t) dot 2 = 32 cos(2t)\
+  (dif y)/(dif t) = e^(2t) dot 2 - cos(2t) dot 2 = 2e^(2t) - 2 cos(2t)\
+  (dif y)/(dif x) = (2e^(2t) - 2 cos(2t))/(32 cos(2t)) = (e^(2t) - cos(2t))/(16 cos(2t))\
+  (dif y)/(dif x)|_(t = -67) = (e^(2(-67)) - cos(2(-67)))/(16 cos(2(-67))) = (e^(-134) - cos(-134))/(16 cos(-134)) = (e^(-134) - cos(134))/(16 cos(134))
+$
+
+=== medium
+Let $f(x) = (sin(pi x))/x$, find $f''(1)$
+$
+  f'(x) = (cos(pi x)pi x - sin(pi x))/(x^2)\
+  f''(x) = ((-pi^2 x sin(pi x))x^2 - (cos(pi x)pi x - sin(pi x))2x)/(x^4)\
+$
+
+== integral
+=== beginner
+
+=== easy
+
+#pagebreak()
+= 2026 23th April
+== derivative
+=== easy
 
 === medium
 
