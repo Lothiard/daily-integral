@@ -994,7 +994,44 @@ $
 $
 
 #pagebreak()
-= 2026 24th April
+= 2026 25th April
+== derivative
+=== easy
+Let $f(x) = ln(sqrt(1 + x^2) + x) + arctan(x)$, find $f'(1)$
+$
+  f'(x) = (1/(sqrt(1 + x^2) + x))(x/(sqrt(1 + x^2)) + 1) + 1/(1 + x^2)\
+  f'(1) = (1/(sqrt(2) + 1))(1/(sqrt(2)) + 1) + 1/2
+$
+
+=== medium
+The curve, $C$, is defined implicitly by the equation
+$
+  3x^4 + 6x y^2 + 2y + x^2 y = 84
+$
+Find the gradient of the tangent to the curve at $x = 2$, and $y > 0$
+$
+  x = 2 ==> 48 + 12y^2 + 2y + 4y = 84\
+  12y^2 + 6y = 36\
+  y(12y + 6) - 36 = 0 ==> y_1 = 3/2, "   " cancel(y_2 = -2) " " (y > 0),\
+  a = (2, 3/2)\
+  partial_x = 12x^3 + 6y^2 + 12x y (y') + 2(y') + 2x y + x^2(y') = 0\
+  partial_x (a) = 96 + 27/2 + 36y' + 2y' + 6 + 4y' = 0\
+  42y' = -231/2 ==> y' = -11/4
+$
+
+== integral
+=== beginner
+$integral_(-pi)^pi (sinh(x) abs(x) x^2 tan^2(x) cos(x))/(x^4 sin^2(x)) dif x$\
+this shit is just $0$
+
+=== easy
+$integral_(-67)^67 abs(abs(x) - 67)/67 dif x$
+$
+  2 integral_0^67 (67 - x)/67 dif x = 2 integral_0^67 1 - x/67 dif x = 2[x - 1/67 x^2/2]_0^67 = 134 - 67 - 0 = 67
+$
+
+#pagebreak()
+= 2026 26th April
 == derivative
 === easy
 
