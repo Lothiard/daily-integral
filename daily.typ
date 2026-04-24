@@ -904,15 +904,97 @@ Let $f(x) = (sin(pi x))/x$, find $f''(1)$
 $
   f'(x) = (cos(pi x)pi x - sin(pi x))/(x^2)\
   f''(x) = ((-pi^2 x sin(pi x))x^2 - (cos(pi x)pi x - sin(pi x))2x)/(x^4)\
+  f''(1) = -pi sin(pi) - (cos(pi)pi - sin(pi))2 = -2(-pi) = 2pi
 $
 
 == integral
 === beginner
+$integral_0^((2pi)/5) sec^3(x) sin(x) dif x$
+$
+  integral_0^((2pi)/5) 1/(cos^3(x)) sin(x) dif x = integral_0^((2pi)/5) tan(x) sec^2(x) dif x = 1/2[tan^2(x)]_0^((2pi)/5) = 1/2 tan^2((2pi)/5)
+$
 
 === easy
+$integral_1^e x^((ln(ln(x)))/(ln(x))) dif x$
+$
+  integral_1^e (e^(ln(x)))^((ln(ln(x)))/(ln(x))) dif x = integral_1^e e^(ln(x) dot (ln(ln(x)))/(ln(x))) dif x = integral_1^e e^(ln(ln(x))) dif x = integral_1^e ln(x) dif x =\ = [x ln(x) - x]_1^e = e - e + 1 = 1
+$
 
 #pagebreak()
 = 2026 23th April
+== derivative
+=== easy
+Let $f(x) = ln(x) + 1/x$, find the minimum value of $f(x)$
+$
+  f'(x) = 1/x - 1/x^2 = 0 ==> x = 1
+$
+
+=== medium
+Let $f(x) = ln(cos^3(sqrt(x)))$, find $f'(pi^2/8)$
+$
+  f'(x) = (3cos^2(sqrt(x))(-sin(sqrt(x)))1/(2sqrt(x)))/(cos^3(sqrt(x))) = -(3sin(sqrt(x)))/(cos(sqrt(x)) 2sqrt(x)) = -3/2 dot tan(sqrt(x))/(sqrt(x))\
+  f'((pi^2)/8) = -3/2 dot tan(pi/(2sqrt(2)))/(pi/(2sqrt(2))) = -3/2 tan(pi/(2sqrt(2))) (2sqrt(2))/pi
+$
+
+== integral
+=== beginner
+$integral_0^(pi/4) (e^(sqrt(x)) - sin(sqrt(x)))/(2sqrt(x)) dif x$
+$
+  u = sqrt(x), "   " (dif u)/(dif x) = 1/(2sqrt(x)), "   " dif x = 2sqrt(x) dif u,\
+  integral_0^((sqrt(pi))/2) e^u - sin(u) dif u = [e^u + cos(u)]_0^(sqrt(pi)/2) = e^(sqrt(pi)/2) + cos(sqrt(pi)/2) - 1 - 1 = e^(sqrt(pi)/2) + cos(sqrt(pi)/2) - 2
+$
+
+=== easy
+$integral_0^pi 1/(1 + 3^(cos(x))) dif x$
+$
+  I = integral_0^pi 1/(1 + 3^(cos(x))) dif x = integral_0^pi 1/(1 + 3^(cos(pi - x))) dif x = integral_0^pi 1/(1 + 3^(-cos(x))) dif x = integral_0^pi (3^(cos(x)))/((1 + 3^(-cos(x)))3^cos(x)) dif x =\ = integral_0^pi (3^(cos(x)))/(3^cos(x) + 1) dif x = I\
+  2I = integral_0^pi (1/(1 + 3^(cos(x))) + (3^(cos(x)))/(3^cos(x) + 1)) dif x = integral_0^pi (1 + 3^cos(x))/(1 + 3^cos(x)) dif x = integral_0^pi 1 dif x = [x]_0^pi = pi\
+  2I = pi ==> I = pi/2
+$
+
+#pagebreak()
+= 2026 24th April
+== derivative
+=== easy
+Let $y = x^(sin(x))$, find $(dif y)/(dif x)$ at $x = pi/2$
+$
+  ln(y) = ln(x^sin(x))\
+  ln(y) = ln(x) sin(x)\
+  1/y (dif y)/(dif x) = sin(x)/x + ln(x) cos(x)\
+  (dif y)/(dif x) = y (sin(x)/x + ln(x) cos(x))\
+  (dif y)/(dif x) = x^sin(x) (sin(x)/x + ln(x) cos(x))\
+  x = pi/2 ==> (dif y)/(dif x) = pi/2(2/pi + ln(pi/2) dot 0)\
+  (dif y)/(dif x) = 1
+$
+
+=== medium
+Let $f(x) = (abs(x))/(2 cos(ln(x)))$, find $f'(200)$
+$
+  f'(x) =_(200 > 0) dif/(dif x) (x/(2 cos(ln(x)))) = (2 cos(ln(x)) - x(2(-sin(ln(x)) 1/x)))/((2 cos(ln(x)))^2) = (2cos(ln(x)) + 2sin(ln(x)))/((2 cos(ln(x)))^2) =\ = (cos(ln(x)) + sin(ln(x)))/(2 cos^2(ln(x))),\
+  f'(200) = (cos(ln(200)) + sin(ln(200)))/(2 cos^2(ln(200)))
+$
+
+== integral
+=== beginner
+$integral_0^(pi/2) sin(x)/(1 + cos^2(x)) dif x$
+$
+  dif/(dif x)(1 + cos^2(x)) = -2cos(x)sin(x),\
+  u = cos(x), "   " (dif u)/(dif x) = -sin(x), "   " dif x = - 1/sin(x),\
+  - integral_(1)^(0) 1/(1 + u^2) dif u = [arctan(u)]_0^1 = arctan(1)
+$
+
+#pagebreak()
+=== easy
+$integral_0^(pi/6) (sec(x) + tan(x))^7 sec(x) dif x$
+$
+  integral_0^(pi/6) (sec(x) + tan(x))^7 sec(x) dif x = integral_0^(pi/6) (sec(x) + tan(x))^6 sec(x)(sec(x) + tan(x)) dif x,\
+  u = sec(x) + tan(x), "   " (dif u)/(dif x) = tan(x)sec(x) + sec^2(x) = sec(x)(sec(x) + tan(x)),\
+  dif x = 1/(sec(x)(sec(x) + tan(x))) dif u,\
+  integral_1^(sqrt(3)) u^6 dif u = [u^7/7]_1^sqrt(3) = sqrt(3^7)/7 - 1/7 = (sqrt(3^7) - 1)/7
+$
+
+#pagebreak()
+= 2026 24th April
 == derivative
 === easy
 
