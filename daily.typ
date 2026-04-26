@@ -1034,6 +1034,52 @@ $
 = 2026 26th April
 == derivative
 === easy
+The curve $C$ has the equation
+$
+  y^2 - 3y = x^3 + 8
+$
+Find the gradient of $C$ at the point where $y = 3$
+$
+  y = 3 ==> 0 = x^3 + 8 ==> x = root(3, -8) =-2 ==> a = (-2, 3)\
+  partial_x = 2y(y') - 3(y') = 3x^2\
+  partial_x (a) = 6(y') - 3(y') = 12\
+  y' = 4
+$
+
+=== medium
+Consider the function $f(x) = x^(sin(x) - x) dot (sin(x))^x dot (x/(sin(x)))^(sin(x) + x)$, find $f'(pi/2)$
+$
+  ln(f(x)) = (sin(x) - x)ln(x) + x ln(sin(x)) + (sin(x) + x) (ln(x) - ln(sin(x)))\
+  sin(x) ln(x) - x ln(x) + x ln(sin(x)) + sin(x) ln(x) - sin(x) ln(sin(x)) + x ln(x) - x ln(sin(x))\
+  ln(f(x)) = 2(sin(x) ln(x)) - sin(x) ln(sin(x))\
+  (f'(x))/(f(x)) = 2(cos(x) ln(x) + sin(x)/x) - cos(x) ln(sin(x)) - sin(x) cos(x)/(sin(x))\
+  (f'(pi/2))/(f(pi/2)) = 2(2/pi) = 4/pi\
+  ln(f(pi/2)) = 2 ln(pi/2) = ln((pi/2)^2) ==> f(x) = (pi/2)^2\
+  f'(pi/2) = (4/pi)(pi/2)^2 = pi
+$
+
+== integral
+=== beginner
+$integral_(-e)^0 1/(1 + e^(-x)) dif x$
+$
+  integral_(-e)^0 1/(1 + e^(-x)) dif x = integral_(-e)^0 1/(1 + e^(-x)) dot e^x/e^x dif x = integral_(-e)^0 e^x/(e^x + 1) dif x = [ln abs(e^x + 1)]_(-e)^0 = ln(2) - ln (e^(-e) + 1) =\ =
+  ln(2/(e^(-e) + 1))
+$
+
+#pagebreak()
+=== easy
+$integral_sqrt(e)^e (x^2 ln(ln(x)) + x^2 ln(x) + ln(x) + ln(ln(x)))/(x^3 + x) dif x$
+$
+  u = ln(x), "   " (dif u)/(dif x) = 1/x, "   " dif x = x dif u, "   " x = e^u\
+  integral_(1/2)^1 (e^(2u) ln(u) + e^(2u) u + u + ln(u))/(e^(3u) + e^u) dot e^u dif u = integral_(1/2)^1 (e^(2u) ln(u) + e^(2u) u + u + ln(u))/(e^(2u) + 1) dif u\
+  (e^(2u) ln(u) + e^(2u) u) + (u + ln(u)) = (e^(2u)(ln(u) + u)) + u + ln(u) = (u + ln(u))(e^(2u) + 1)\
+  integral_(1/2)^1 ((u + ln(u))(e^(2u) + 1))/(e^(2u) + 1) dif u = integral_(1/2)^1 u + ln(u) dif u = [u^2/2 + u ln(u) - u]_(1/2)^1 =\ = 1/2 - 1 - (1/8 + 1/2 ln(1/2) - 1/2) = -1/8 - 1/2 ln(1/2)
+$
+
+#pagebreak()
+= 2026 27th April
+== derivative
+=== easy
 
 === medium
 
