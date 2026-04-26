@@ -847,7 +847,7 @@ $
 $
 
 #pagebreak()
-= 2026 21th April
+= 2026 21st April
 == derivative
 === easy
 Let $x^2 y + y^3 = 170$, find $(dif y)/(dif x)$ at $(3, 5)$
@@ -1078,6 +1078,40 @@ $
 
 #pagebreak()
 = 2026 27th April
+== derivative
+=== easy
+Let $f(x) = (2x - 3) cos(x) - 2 sin(x) + 5$, at what $x$-value does the function reach its maximum on the interval $(0, pi/2)$?
+$
+  f'(x) = 2 cos(x) - (2x - 3) sin(x) - 2 cos(x) = -(2x - 3) sin(x)\
+  f'(x) =^?_((0, pi/2)) 0 ==> x_1 = 3/2, "   " cancel(x_2 = 0)
+$
+
+=== medium
+Let $q(x) = 2x + 1$ and $(p circle.small q)(x) = 4x^2 - 2x + 3$, find $p'(12)$
+$
+  u = 2x + 1, "   "x = (u - 1)/2\
+  4((u - 1)/2)^2 - 2((u - 1)/2) + 3\
+  u^2 - 2u + 1 - u + 1 + 3 = u^2 - 3u + 5\
+  p'(x) = 2x -3\
+  p'(12) = 21
+$
+
+== integral
+=== beginner
+$integral_0^(pi/2) (1 + 2 cos(x))^3 sin(x) dif x$
+$
+  u = 1 + 2cos(x), "   " (dif u)/(dif x) = -2sin(x), "   " dif x = - 1/(2sin(x)) dif u\
+  integral_0^(pi/2) (1 + 2 cos(x))^3 sin(x) dif x = integral_3^1 u^3 (-1/2) dif u = 1/2 integral_1^3 u^3 dif u = 1/2[u^4/4]_1^3 = 1/2((3^4)/(4) - 1^4/4) = (81 - 1)/8 = 10\
+$
+
+=== easy
+$integral_0^(pi/4) tan^3(x) dif x$
+$
+  integral_0^(pi/4) tan^3(x) dif x = integral_0^(pi/4) tan(x) tan^2(x) dif x = integral_0^(pi/4) tan(x) (sec^2(x) - 1) dif x =\ = integral_0^(pi/4) tan(x) sec^2(x) dif x - integral_0^(pi/4) tan(x) dif x = [1/2 tan^2(x) - ln(sec(x))]_0^(pi/4) =\ = (1/2 tan^2(pi/4) - ln(sec(pi/4))) - (1/2 tan^2(0) - ln(sec(0))) = (1/2 (1)^2 - ln(sqrt(2))) - (0 - ln(1)) =\ = 1/2 - ln(2^(1/2)) = 1/2 - 1/2 ln(2) = (1 - ln(2))/2
+$
+
+#pagebreak()
+= 2026 28th April
 == derivative
 === easy
 
