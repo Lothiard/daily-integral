@@ -1114,6 +1114,47 @@ $
 = 2026 28th April
 == derivative
 === easy
+Let $f(x) = 1/(sin(x) + cos(x) + tan(x) + sec(x) + csc(x) + cot(x))$, find $f'(20)$
+$
+  f'(x) = -(cos(x) - sin(x) + sec^2(x) + tan(x)sec(x) - cot(x)csc(x) - csc^2(x))/((sin(x) + cos(x) + tan(x) + sec(x) + csc(x) + cot(x))^2)\
+  f'(20) = -(cos(20) - sin(20) + sec^2(20) + tan(20)sec(20) - cot(20)csc(20) - csc^2(20))/((sin(20) + cos(20) + tan(20) + sec(20) + csc(20) + cot(20))^2)
+$
+
+=== medium
+Let $f$ be a function such that $f'(x) = 2010(x - 2009)(x - 2010)^2(x - 2011)^3(x - 2012)^4$.\
+If $f(x) = ln(g(x))$ for $g(x) > 0$, find the number of points where $g$ has a local maximum.
+$
+  f'(x) = (g'(x))/g(x) ==> (f'(x) = 0 <==> g'(x) = 0)
+$
+- $x < 2009$: $+$
+- $x = 2009$: $-$
+- $x = 2010$: $-$
+- $x = 2011$: $+$
+- $x = 2012$: $+$
+
+== integral
+=== beginner
+$integral_(pi/6)^(pi/3) 1/(tan(x) sin^2(x)) dif x$
+$
+  integral_(pi/6)^(pi/3) (cos(x))/(sin(x)sin^2(x)) dif x = integral_(pi/6)^(pi/3) (cos(x))/(sin^3(x)) dif x\
+  u = sin(x), "   " (dif u)/(dif x) = cos(x), "   " dif x = 1/cos(x) dif u\
+  integral_(1/2)^(sqrt(3)/2) u^(-3) dif u = [- u^(-2)/2]_(1/2)^(sqrt(3)/2) = [- 1/(2 u^(2))]_(1/2)^(sqrt(3)/2) = - 1/(2 3/4) + 1/(2 1/4) = 2 - 2/3 = 4/3
+$
+
+#pagebreak()
+=== easy
+$integral_(pi/4)^(pi/2) (2026 tan(x))/((4 - (1 + cos(x)) (1 - cos(x)))^(3/2) sec^2(x)) dif x$
+$
+  4 - underbrace((1 + cos(x)), A + B) underbrace((1 - cos(x)), A - B) = 4 - A^2 - B^2 = 4 - sin^2(x)\
+  2026 integral_(pi/4)^(pi/2) ((sin(x))/cos(x))/((4 - sin^2(x))^(3/2) 1/(cos^2(x))) dif x = 2026 integral_(pi/4)^(pi/2) (sin(x)cos(x))/((4 - sin^2(x))^(3/2))\
+  u = 4 - sin^2(x), "   " (dif u)/(dif x) = -2sin(x)cos(x), "   " dif x = - 1/(2 sin(x)cos(x)) dif u\
+  - 1013 integral_(7/2)^3 u^(-3/2) dif u = 1013 [-(u^(-1/2))/(1/2)]_3^(7/2) = -2026 [1/(sqrt(u))]_3^(7/2) = -2026(1/(sqrt(7/2)) - 1/sqrt(3))
+$
+
+#pagebreak()
+= 2026 29th April
+== derivative
+=== easy
 
 === medium
 
